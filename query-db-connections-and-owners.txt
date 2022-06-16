@@ -1,0 +1,17 @@
+Query current connection profile allocations
+
+mysql -u root -p guacamole_db
+
+select 
+    guacamole_entity.name, 
+    guacamole_connection.connection_name, 
+    guacamole_connection_permission.permission 
+from 
+    guacamole_connection 
+    left join guacamole_connection_permission on guacamole_connection_permission.connection_id = guacamole_connection.connection_id 
+    left join guacamole_entity on guacamole_entity.entity_id = guacamole_connection_permission.entity_id 
+where 
+    guacamole_connection_permission.permission = 'READ' 
+    and guacamole_entity.name != 'guacadmin';
+	
+Quit to exit
