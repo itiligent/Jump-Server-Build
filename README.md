@@ -1,2 +1,7 @@
-# Guacamole-with-Nginx-installer
-Build a Guacamole server with an Nginx reverse proxy frontend
+Build Guacamole 1.40 Server With Nginx Front End
+
+Installer:
+
+
+Config options:
+
