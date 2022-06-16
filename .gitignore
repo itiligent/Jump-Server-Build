@@ -1,2 +1,7 @@
 # Ignore all text files
 *.txt
+
+# Ignore all word docs
+*.doc
+*.docx
+*.rtf
