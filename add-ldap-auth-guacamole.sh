@@ -1,6 +1,6 @@
 #!/bin/bash
 #########################################################################
-# Add Active Directroty support to Guacamole  
+# Add Active Directory support to Guacamole  
 # For Ubuntu 20.04.4 / Debian / Raspian
 # David Harrop 
 # April 2022
