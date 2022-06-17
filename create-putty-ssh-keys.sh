@@ -1,6 +1,6 @@
 #!/bin/bash
 ###################################################################################
-# Create ssh keys for remote putty access  
+# Create ssh keys for remote putty ssh access  
 # For Ubuntu / Debian / Raspian
 # David Harrop 
 # June 2022
