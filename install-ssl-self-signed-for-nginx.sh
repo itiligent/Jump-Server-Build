@@ -1,6 +1,6 @@
 #!/bin/bash
 ###################################################################################
-# Create Self signed SSL certificates for Guacamole Nginx reverse proxy
+# Create self signed SSL certificates for Guacamole Nginx reverse proxy
 # For Ubuntu 20.04.4 / Debian / Raspian
 # David Harrop 
 # June 2022
