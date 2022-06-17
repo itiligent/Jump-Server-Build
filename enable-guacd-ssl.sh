@@ -1,6 +1,6 @@
 #!/bin/bash
 ################################################################
-## Harden Guacd Traffic In SSL Wrapper
+## Harden Guacd <-> Guac client traffic in SSL wrapper
 ## David Harrop
 ## April 2022
 ################################################################ 
