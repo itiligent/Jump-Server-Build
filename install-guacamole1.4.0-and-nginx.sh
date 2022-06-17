@@ -6,7 +6,6 @@
 ########################################################################## 
 # Something not working?  tail -f /var/log/messages /var/log/syslog /var/log/tomcat*/*.out /var/log/mysql/*.log
 
-## Start fresh
 clear
 
 ##@@## Colors to use for output
