@@ -2,7 +2,7 @@
 ###################################################################################
 # Add Nginx reverse proxy to an exisiting default Gaucamole installation
 # For Ubuntu 20.04.4 / Debian / Raspian
-# David Harrop (with multiple external resources)
+# David Harrop
 # April 2022
 ################################################################################### 
 # Get domain or site name 
