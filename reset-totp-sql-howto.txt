@@ -1,6 +1,7 @@
 ## Reset TOTP configuration for a user account 
 ## This is likely not needed in Gucamole 1.40 as the gui provides an option to reset. Kept for reference.
 
+
 mysql -u root -p
 
 use guacamol_db;
