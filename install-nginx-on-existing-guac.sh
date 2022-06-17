@@ -1,6 +1,6 @@
 #!/bin/bash
 ###################################################################################
-# Add Nginx reverse proxy with Gaucamole on port 80, no additional config
+# Add Nginx reverse proxy to an exisiting default Gaucamole installation
 # For Ubuntu 20.04.4 / Debian / Raspian
 # David Harrop (with multiple external resources)
 # April 2022
