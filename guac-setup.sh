@@ -33,3 +33,4 @@ chmod +x *.sh
 sudo --no-check-certificate --content-disposition wget https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/install-guacamole1.4.0-and-nginx.sh -v -O install-guacamole1.4.0-and-nginx.sh && ./install-guacamole1.4.0-and-nginx.sh
 
 
+
