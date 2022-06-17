@@ -2,6 +2,6 @@
 *.txt
 
 # Ignore word docs
-*.doc
-*.docx
+#*.doc
+#*.docx
 
