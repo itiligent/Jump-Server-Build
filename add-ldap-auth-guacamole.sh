@@ -32,6 +32,6 @@ ldap-user-base-dn: OU=SomeOU,DC=domain,DC=com
 ldap-user-search-filter:(objectClass=user)(!(objectCategory=computer))
 ldap-max-search-results:200
 EOF
-sudo cp guacamole-auth-ldap-1.4.0.jar /etc/guacamole/extensions
+sudo cp extensions/guacamole-auth-ldap-1.4.0.jar /etc/guacamole/extensions
 sudo chmod 664 /etc/guacamole/extensions/guacamole-auth-ldap-1.4.0.jar
 sudo systemctl restart tomcat9
