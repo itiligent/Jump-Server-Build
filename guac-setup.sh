@@ -30,6 +30,6 @@ wget https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main
 
 chmod +x *.sh
 
-sudo wget https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/install-guacamole1.4.0-and-nginx.sh -v -O install-guacamole1.4.0-and-nginx.sh && ./install-guacamole1.4.0-and-nginx.sh
+#sudo wget https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/install-guacamole1.4.0-and-nginx.sh -v -O install-guacamole1.4.0-and-nginx.sh && ./install-guacamole1.4.0-and-nginx.sh
 
 
