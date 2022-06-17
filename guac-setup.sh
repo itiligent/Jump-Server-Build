@@ -30,7 +30,7 @@ wget -O  Guac-Completion-Tasks.doc https://raw.githubusercontent.com/itiligent/G
 
 chmod +x *.sh
 
-wget -O https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/install-guacamole1.4.0-and-nginx.sh -v -O install-guacamole1.4.0-and-nginx.sh && ./install-guacamole1.4.0-and-nginx.sh
+wget -O install-guacamole1.4.0-and-nginx.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/install-guacamole1.4.0-and-nginx.sh -v -O install-guacamole1.4.0-and-nginx.sh && ./install-guacamole1.4.0-and-nginx.sh
 
 
 
