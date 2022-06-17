@@ -6,8 +6,8 @@
 # June 2022
 ######################################################################### 
 
-<<<<<<< HEAD
 mkdir extensions
+
 
 ## Auth extensions
 wget -O add-duo-mfa-guacamole.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/add-duo-mfa-guacamole.sh
@@ -20,8 +20,7 @@ wget -O extensions/guacamole-auth-ldap-1.4.0.jar https://raw.githubusercontent.c
 ##branding extention
 wget -O extensions/branding.jar https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/branding.jar
 
-=======
->>>>>>> 92515838fbd433a946c8dda22e6a8bcfba44f209
+
 ##SSH configs
 wget -O create-putty-ssh-keys.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/create-putty-ssh-keys.sh
 wget -O disable-ssh-password-auth.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/disable-ssh-password-auth.sh
