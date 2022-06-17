@@ -1,6 +1,6 @@
 #!/bin/bash
 ################################################################
-## Guacamole MySQL Database Backup Script
+## Guacamole MySQL Database Backup
 ## David Harrop
 ## April 2022
 ################################################################
