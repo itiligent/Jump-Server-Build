@@ -6,7 +6,7 @@ To install Guacamole 1.40 with an incorporated Nginx reverse proxy front end:
 	
 	This script builds an instance of Guacamole 1.40 bound to 127.0.01 and with options for DUO & TOTP MFA. A server hostname and Nginx site name is set before an instance of Nginx is installed and linked with Gucamole on Nginx port 80. All Nginx tweaks for enabling client IP adddress logging passthough and large file transfers are added.   The script also sets up NTP and UFW allowing incoming TCP 80/443/22 plus default allow all outgoing.
         
-Adding Authentication extensions or branding after install:
+Adding authentication extensions or branding after install:
 	
 	Choose your appropiate extension file and download for copy to a local ~/extensions directroy. 
 	Duo: 
