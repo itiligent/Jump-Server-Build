@@ -34,6 +34,3 @@ wget -O install-guacamole1.4.0-and-nginx.sh https://raw.githubusercontent.com/it
 chmod +x *.sh
 
 sudo ./install-guacamole1.4.0-and-nginx.sh
-
-
-
