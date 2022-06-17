@@ -1,6 +1,5 @@
 ## Useful to Audit Guacamole Connections and User access.##
 
-
 Query current connection profile allocations
 
 mysql -u root -p guacamole_db
