@@ -1,4 +1,4 @@
-## Build a Guacamole jump server on Ubuntu or Raspian ##
+## Build A Guacamole Jump Server On Ubuntu Or Raspian ##
 
 To install Guacamole 1.40 with an incorporated Nginx reverse proxy front end:
 
