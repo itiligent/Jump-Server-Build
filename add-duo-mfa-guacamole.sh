@@ -1,6 +1,6 @@
 #!/bin/bash
 #########################################################################
-# Add Duo MFA support to Guacamole  
+# Add Duo (MFA) support to Guacamole  
 # For Ubuntu 20.04.4 / Debian / Raspian
 # David Harrop 
 # April 2022
