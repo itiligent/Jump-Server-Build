@@ -6,7 +6,7 @@
 # April 2022
 ######################################################################### 
 clear
-cp extensions/guacamole-auth-duo-1.4.0.jar /etc/guacamole/extensions
+cp guacamole-auth-duo-1.4.0.jar /etc/guacamole/extensions
 chmod 664 /etc/guacamole/extensions/guacamole-auth-duo-1.4.0.jar
 echo "# duo-integration-key: " >> /etc/guacamole/guacamole.properties
 echo "# duo-secret-key: " >> /etc/guacamole/guacamole.properties
