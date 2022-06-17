@@ -6,7 +6,7 @@
 # April 2022
 ######################################################################### 
 clear
-cp guacamole-auth-totp-1.4.0.jar /etc/guacamole/extensions
+cp extensions/guacamole-auth-totp-1.4.0.jar /etc/guacamole/extensions
 chmod 664 /etc/guacamole/extensions/guacamole-auth-totp-1.4.0.jar
 systemctl restart tomcat9
 
