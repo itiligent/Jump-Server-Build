@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Something isn't working? # tail -f /var/log/messages /var/log/syslog /var/log/tomcat*/*.out /var/log/mysql/*.log
 
 # Check if user is root or sudo
