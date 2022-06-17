@@ -3,8 +3,12 @@
 # Build a Guacamole server with an Nginx reverse proxy frontend  
 # For Ubuntu 20.04.4 / Debian / Raspian
 # David Harrop  April 2022
-########################################################################## 
-# Something not working?  tail -f /var/log/messages /var/log/syslog /var/log/tomcat*/*.out /var/log/mysql/*.log
+# based on https://github.com/MysticRyuujin/guac-install
+######################################################################### 
+# Something not working? # tail -f /var/log/messages /var/log/syslog /var/log/tomcat*/*.out /var/log/mysql/*.log
+
+##@@## Start fresh
+clear
 
 ##@@## Colors to use for output
 YELLOW='\033[1;33m'
