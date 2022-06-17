@@ -1,6 +1,6 @@
 #!/bin/bash
 #########################################################################
-# Build a working Guacamole server with Nginx reverse proxy 
+# Build a fully working Guacamole server with Nginx reverse proxy 
 # For Ubuntu 20.04.4 / Debian / Raspian
 # David Harrop 
 # April 2022
