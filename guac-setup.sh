@@ -8,7 +8,6 @@
 
 mkdir extensions
 
-
 ## Auth extensions
 wget -O add-duo-mfa-guacamole.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/add-duo-mfa-guacamole.sh
 wget -O extensions/guacamole-auth-duo-1.4.0.jar https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/guacamole-auth-duo-1.4.0.jar
