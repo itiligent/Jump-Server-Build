@@ -5,7 +5,7 @@
 # David Harrop  April 2022
 # based on https://github.com/MysticRyuujin/guac-install
 ######################################################################### 
-# Something isn't working? # tail -f /var/log/messages /var/log/syslog /var/log/tomcat*/*.out /var/log/mysql/*.log
+# Something not working? # tail -f /var/log/messages /var/log/syslog /var/log/tomcat*/*.out /var/log/mysql/*.log
 
 ##@@## Start fresh
 clear
