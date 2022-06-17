@@ -6,8 +6,6 @@
 # June 2022
 ######################################################################### 
 
-
-
 ## Auth extensions
 wget https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/add-duo-mfa-guacamole.sh
 wget https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/guacamole-auth-duo-1.4.0.jar
