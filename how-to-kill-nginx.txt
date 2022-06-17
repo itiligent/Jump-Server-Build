@@ -1,4 +1,4 @@
-kill Nginx!
+kill Nginx!!
 
 https://ourcodeworld.com/articles/read/949/how-to-perform-a-dos-attack-slow-http-with-slowhttptest-test-your-server-slowloris-protection-in-kali-linux
 
