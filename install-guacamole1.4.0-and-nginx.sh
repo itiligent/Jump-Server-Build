@@ -5,7 +5,6 @@
 # David Harrop  April 2022
 ########################################################################## 
 # Something not working?  tail -f /var/log/messages /var/log/syslog /var/log/tomcat*/*.out /var/log/mysql/*.log
-clear
 
 ##@@## Colors to use for output
 YELLOW='\033[1;33m'
