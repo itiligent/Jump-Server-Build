@@ -1,6 +1,6 @@
 #!/bin/bash
 #########################################################################
-# Add TOTP MFA support to Guacamole  
+# Add TOTP (MFA) support to Guacamole  
 # For Ubuntu 20.04.4 / Debian / Raspian
 # David Harrop 
 # April 2022
