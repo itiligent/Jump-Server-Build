@@ -1,7 +1,7 @@
 #!/bin/bash
 ###############################################
 # Disable SSH Password Auth 
-# For Ubuntu.
+# For Ubuntu
 # David Harrop June 2022
 ##############################################
 sudo grep -q "ChallengeResponseAuthentication" /etc/ssh/sshd_config && sed -i "/^[^#]*ChallengeResponseAuthentication[[:space:]]yes.*/c\ChallengeResponseAuthentication no" /etc/ssh/sshd_config || echo "ChallengeResponseAuthentication no" >> /etc/ssh/sshd_config
