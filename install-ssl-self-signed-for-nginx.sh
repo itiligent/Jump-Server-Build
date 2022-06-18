@@ -35,8 +35,8 @@ IP.1                = 172.17.18.2
 
 EOF
 ${clear}
-
-echo -e "\e[1;33mCertificate config parameters in this script are shown above. Stop the script and adjust as needed before proceeding."
+echo
+echo -e "\e[1;33mCertificate config parameters are shown above. Edit this script as needed before proceeding."
 
 ####################################################################################
 # Color variables
