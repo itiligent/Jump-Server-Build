@@ -44,7 +44,6 @@ while true
 do
 	echo   
 	read -p "Enter intended Nginx proxy FULL DNS NAME e.g. name.yourdomain.lan  : " website
-	echo -e "Note: This EXACT name must be used when running provided SSL installer scripts"
 	echo 	
     break
     echo -e "${NC}"
