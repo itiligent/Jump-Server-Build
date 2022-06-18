@@ -37,11 +37,22 @@ IP.1                = 10.10.10.1
 
 EOF
 
+
 ${clear}
 echo
 echo -e "\e[1;33mSSL certificate config parameters are shown above."
 echo -e "Ctrl+Z top stop this script & nano install-ssl-self-signed-for-nginx.sh to edit."
 echo
+
+# Get existing Nginx config name 
+for file in "/etc/nginx/sites-enabled"/*
+do
+    echo "${file##*/}"
+    proxysite="${file##*/}"
+    echo "proxysite = " > "${proxysite}"
+done
+
+
 
 ####################################################################################
 # Color variables
@@ -58,11 +69,11 @@ DIR_SSL_CERT="/etc/nginx/ssl/cert"
 DIR_SSL_KEY="/etc/nginx/ssl/private"
 
 #Assign certificate parameter variables
-SSLNAME=$1
+SSLNAME=$1 
 SSLDAYS=$2
 
 if [ -z $1 ]; then
-  printf "Enter SSL certificate name (Nginx proxy DNS name in /etc/nginx/sites-enabled):"
+  printf "Enter SSL certificate name (Should be $proxysite):"
   read SSLNAME
 fi
 echo
@@ -116,18 +127,12 @@ showastext6='$http_upgrade'
 showastext7='$http_connection'
 showastext8='\'
 
-# Backup existing Nginx config before we break things
-for file in "/etc/nginx/sites-enabled"/*
-do
-    echo "${file##*/}"
-    proxysite="${file##*/}"
-    echo "proxysite = " > "${proxysite}"
-done
+# Backup the current Nginx config
 cp /etc/nginx/sites-enabled/$proxysite ~/$proxysite.bak
 echo 
 echo -e "${YELLOW}Existing Nginx proxy site config backed up to ~/$proxysite.bak"
-echo
-echo
+echo 
+echo 
 
 # Print custom output for the various Nginx configs
 # 
