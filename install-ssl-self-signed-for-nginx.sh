@@ -63,7 +63,7 @@ SSLNAME=$1
 SSLDAYS=$2
 
 if [ -z $1 ]; then
-  printf "Enter the SSL Certificate FQDN :"
+  printf "Enter SSL Certificate name (the same reverse proxy DNS name given in the setup script:"
   read SSLNAME
 fi
 echo
