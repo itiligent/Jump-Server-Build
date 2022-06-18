@@ -29,6 +29,13 @@ done
 
 clear
 
+# Backup existing Nginx config before we break things
+sudo -H cp /etc/nginx/sites-enabled/$proxysite /home/$HOME/$proxysite.bak
+echo 
+echo -e "${YELLOW}Existing Nginx proxy site config backed up to ~/$proxysite.bak"
+echo
+echo
+
 # Get domain name, email address and old site names for new Let's encrypt certificate
 while true
 do
@@ -58,7 +65,7 @@ done
 while true
 do
 	echo -e "${GREEN}**Proxy site names are found in /etc/nginx/sites-enabled/**"
-    read -p "Enter name of existing Nginx proxy website to reconfigure e.g. ${CYAN}${proxysite}${GREEN}: " oldsite
+    read -p "Enter name of EXISTING Nginx proxy site to reconfigure e.g. ${proxysite}: " oldsite
 	echo
 	echo
 	break
@@ -66,12 +73,7 @@ do
 	echo
 done
 
-# Backup existing Nginx config before we break things
-cp /etc/nginx/sites-enabled/$proxysite ~/$proxysite.bak
-echo 
-echo -e "${YELLOW}Existing Nginx proxy site config backed up to ~/$proxysite.bak"
-echo
-echo
+
 
 guacamoleurl=http://localhost:8080/guacamole/
 
