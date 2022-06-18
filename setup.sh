@@ -21,7 +21,7 @@ clear
 
 	# SSL config scripts
 		wget -O install-ssl-letsencrypt-for-nginx.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/install-ssl-letsencrypt-for-nginx.sh &> /dev/null
-		wget -O  install-ssl-self-signed-for-nginx.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/install-ssl-self-signed-for-nginx.sh &> /dev/null
+		wget -O install-ssl-self-signed-for-nginx.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/install-ssl-self-signed-for-nginx.sh &> /dev/null
 
 	# Auth extensions
 		mkdir extensions
