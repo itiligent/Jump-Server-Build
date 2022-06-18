@@ -36,7 +36,8 @@ IP.1                = 172.17.18.2
 EOF
 ${clear}
 echo
-echo -e "\e[1;33mSSL certificate config parameters are shown above. Edit this script as needed before proceeding."
+echo -e "\e[1;33mSSL certificate config parameters are shown above."
+echo -e " Ctrl+Z top stop this script & nano install-ssl-self-signed-for-nginx.sh to edit."
 echo
 
 ####################################################################################
