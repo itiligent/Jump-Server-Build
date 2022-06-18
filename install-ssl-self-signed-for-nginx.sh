@@ -151,6 +151,10 @@ echo
 #EOF
 #\n${clear}"
 
+# Backup existing Nginx config before we break things
+cp /etc/nginx/sites-enabled/$SSLNAME ~/$SSLNAME.bak 
+
+
 printf "${green}+---------------------------------------------------------------------------------------------------------------------------
 + NGINX SELF SIGNED SSL CONFIG (WITH AUTO HTTP REDIRECT)
 +
