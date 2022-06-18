@@ -130,7 +130,11 @@ echo
 
 echo
 echo
+
 # Print custom output for the various Nginx configs
+# 
+# Lets keep the non HTTP Redirect config just in case
+# 
 #printf "${blue}+---------------------------------------------------------------------------------------------------------------------------
 #+ NGINX SELF SIGNED SSL CONFIG (NO AUTO HTTP REDIRECT) 
 #+
@@ -237,7 +241,7 @@ echo
 rm extfile.cnf
 
 
-#Nginx somtimes needs a double bounce to avoid a restart
+#Nginx sometimes needs a double bounce to avoid a restart
 sudo systemctl restart tomcat9
 sudo systemctl restart guacd
 sudo systemctl restart nginx
