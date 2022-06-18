@@ -37,7 +37,7 @@ EOF
 ${clear}
 echo
 echo -e "\e[1;33mSSL certificate config parameters are shown above."
-echo -e " Ctrl+Z top stop this script & nano install-ssl-self-signed-for-nginx.sh to edit."
+echo -e "Ctrl+Z top stop this script & nano install-ssl-self-signed-for-nginx.sh to edit."
 echo
 
 ####################################################################################
