@@ -34,7 +34,7 @@ clear
 
 
 # Download final config instructions 
-		wget -O  Guac-Completion-Tasks.doc https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/Guac-Completion-Tasks.doc &> /dev/null
+		wget -O Guac-Completion-Tasks.doc https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/Guac-Completion-Tasks.doc &> /dev/null
 
 # Download main installer script
 		wget -O install-guacamole1.4.0-and-nginx.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/install-guacamole1.4.0-and-nginx.sh &> /dev/null
