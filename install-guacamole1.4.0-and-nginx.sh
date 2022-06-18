@@ -44,7 +44,7 @@ while true
 do
 	echo   
 	read -p "Enter Nginx proxy DNS name e.g. name.yourdomain.lan  : " website
-	echo -e "Please Note: The same proxy site name must be used when running provided SSL install scripts"
+	echo -e "Note: This EXACT proxy name must be used when running provided SSL installer scripts"
 	echo 	
     break
     echo -e "${NC}"
