@@ -45,9 +45,10 @@ done
 
 ##@@## Change server hostname to entered value 
 
-cat >/etc/hostname <<EOL
-$name
-EOL
+sudo hostnamectl set-hostname $name
+sudo sed -i '/127.0.1.1/d' /etc/hosts
+echo '127.0.1.1       ${name}' | sudo tee -a /etc/hosts
+sudo systemctl restart systemd-hostnamed
 
 
 
@@ -848,3 +849,9 @@ printf "${CYAN}+----------------------------------------------------------------
 + To aid with final steps, various configuration scripts and app extensions have also been added to your home directory.
 
 +---------------------------------------------------------------------------------------------------------------------------\n${NC}"
+
+
+
+
+
+
