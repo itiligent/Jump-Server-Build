@@ -46,5 +46,5 @@ wget -O guacamole-auth-totp-1.4.0.jar https://raw.githubusercontent.com/itiligen
 wget -O add-ldap-auth-guacamole.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/add-ldap-auth-guacamole.sh
 wget -O guacamole-auth-ldap-1.4.0.jar https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/guacamole-auth-ldap-1.4.0.jar
 
-##branding extention
+##branding extension
 wget -O branding.jar https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/branding.jar
