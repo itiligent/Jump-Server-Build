@@ -73,7 +73,7 @@ SSLNAME=$1
 SSLDAYS=$2
 
 if [ -z $1 ]; then
-  printf "Enter SSL certificate name (Should be $proxysite):"
+  printf "Enter SSL certificate DNS name (existing HTTP site is $proxysite):"
   read SSLNAME
 fi
 echo
@@ -86,13 +86,13 @@ if [[ $SSLDAYS == "" ]]; then
   $SSLDAYS = 3650
 fi
 echo
-while true
-do
-	echo -e "${GREEN}**Proxy site names are found in /etc/nginx/sites-enabled/**"
-    read -p "Enter the name of your existing Nginx proxy site: " website
-    echo && break
-    echo
-done
+#while true
+#do
+#	echo -e "${GREEN}**Proxy site names are found in /etc/nginx/sites-enabled/**"
+#    read -p "Enter the name of your existing Nginx proxy site: " website
+#    echo && break
+#    echo
+#done
 
 
 echo "Creating a new Certificate ..."
@@ -144,7 +144,7 @@ echo
 #+ Copy the below content and paste into a linux shell
 #+ then restart NGINX with ${cyan}sudo systemctl restart nginx${blue}
 #+---------------------------------------------------------------------------------------------------------------------------\n
-#cat <<EOF | sudo tee /etc/nginx/sites-enabled/$website
+#cat <<EOF | sudo tee /etc/nginx/sites-enabled/$proxysite
 #server {
 #    listen 80 default_server;
 #    root /var/www/html;
@@ -175,7 +175,7 @@ printf "${green}+---------------------------------------------------------------
 + Copy the below content and paste into a linux shell
 + then restart NGINX with ${cyan}sudo systemctl restart nginx${green}
 +---------------------------------------------------------------------------------------------------------------------------\n
-cat <<EOF | sudo tee /etc/nginx/sites-enabled/$website
+cat <<EOF | sudo tee /etc/nginx/sites-enabled/$proxysite
 server {
     #listen 80 default_server;
     root /var/www/html;
