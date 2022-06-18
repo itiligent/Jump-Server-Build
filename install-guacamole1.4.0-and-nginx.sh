@@ -31,6 +31,14 @@ do
 	echo
 done 
 
+##@@## Change server hostname to entered value 
+sudo hostnamectl set-hostname $name
+sudo sed -i '/127.0.1.1/d' /etc/hosts
+echo -e "Changing system namem and adjusting /etc/hosts entry to:"
+echo '127.0.1.1       '${name}'' | sudo tee -a /etc/hosts
+echo 
+sudo systemctl restart systemd-hostnamed
+
 # Ask for reverse proxy site name - this needs to match with later ssl installation scripts 
 while true
 do
@@ -43,14 +51,7 @@ do
 done
 
 
-##@@## Change server hostname to entered value 
-h=$name
-sudo hostnamectl set-hostname $name
-sudo sed -i '/127.0.1.1/d' /etc/hosts
-echo -e "Changing system namem and adjusting /etc/hosts entry to:"
-echo '127.0.1.1       '${name}'' | sudo tee -a /etc/hosts
-echo 
-sudo systemctl restart systemd-hostnamed
+
 
 
 
