@@ -2,7 +2,7 @@
 #########################################################################
 # Build a Guacamole jump server incorporating Nginx reverse proxy 
 # For Ubuntu 20.04.4 / Debian / Raspian
-# David Harrop 
+# David Harrop (inspired by MysticRyuujin)
 # April 2022
 ######################################################################### 
 # Something isn't working? # tail -f /var/log/messages /var/log/syslog /var/log/tomcat*/*.out /var/log/mysql/*.log
@@ -49,11 +49,6 @@ do
     break
     echo -e "${NC}"
 done
-
-
-
-
-
 
 # Check if user is root or sudo
 if ! [ $( id -u ) = 0 ]; then
@@ -852,9 +847,3 @@ printf "${CYAN}+----------------------------------------------------------------
 + To aid with final steps, various configuration scripts and app extensions have also been added to your home directory.
 
 +---------------------------------------------------------------------------------------------------------------------------\n${NC}"
-
-
-
-
-
-
