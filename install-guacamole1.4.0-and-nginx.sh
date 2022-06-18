@@ -832,7 +832,7 @@ fi
 
 ##@@## Set timezone reminder
 printf "${PURPLE}+---------------------------------------------------------------------------------------------------------------------------
-+ Remember To Set Timezone:
++ Remember To Set System Timezone:
 +
 + Run${YELLOW} timedatectl list-timezones${PURPLE}
 + Browse the list of timezones and identify your closest zone name
