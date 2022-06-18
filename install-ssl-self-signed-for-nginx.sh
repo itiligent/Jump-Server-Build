@@ -6,7 +6,7 @@
 # June 2022
 #####################################################################################
 clear
-echo -e "\e[1;33mCertificate config parameters are shown below. Stop the script and adjust as needed before proceeding."
+
 echo
 cat <<EOF | sudo tee -a extfile.cnf
 [req]
@@ -35,6 +35,8 @@ IP.1                = 172.17.18.2
 
 EOF
 ${clear}
+
+echo -e "\e[1;33mCertificate config parameters in this script are shown above. Stop the script and adjust as needed before proceeding."
 
 ####################################################################################
 # Color variables
