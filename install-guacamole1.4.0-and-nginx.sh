@@ -43,7 +43,7 @@ sudo systemctl restart systemd-hostnamed
 while true
 do
 	echo   
-	read -p "Enter new Nginx reverse proxy site name e.g. guacamole : " website
+	read -p "Enter new Nginx reverse proxy site name e.g. guacamole or site.lan : " website
 	echo -e "Please Note: The same proxy site name must be used when running provided SSL install scripts"
 	echo 	
     break
