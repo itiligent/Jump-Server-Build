@@ -43,8 +43,8 @@ sudo systemctl restart systemd-hostnamed
 while true
 do
 	echo   
-	read -p "Enter Nginx proxy DNS name e.g. name.yourdomain.lan  : " website
-	echo -e "Note: This EXACT proxy name must be used when running provided SSL installer scripts"
+	read -p "Enter intended Nginx proxy DNS name e.g. name.yourdomain.lan  : " website
+	echo -e "Note: This EXACT name must be used when running provided SSL installer scripts"
 	echo 	
     break
     echo -e "${NC}"
