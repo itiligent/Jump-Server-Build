@@ -21,7 +21,7 @@ ST                  = VICTORIA
 L                   = Melbourne
 O                   = Pax8
 OU                  = Academy
-CN                  = test.lan
+CN                  = domain.com
  
 [v3_req]
 keyUsage            = nonRepudiation, digitalSignature, keyEncipherment
