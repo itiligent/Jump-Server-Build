@@ -116,6 +116,18 @@ showastext6='$http_upgrade'
 showastext7='$http_connection'
 showastext8='\'
 
+# Backup existing Nginx config before we break things
+for file in "/etc/nginx/sites-enabled"/*
+do
+    echo "${file##*/}"
+    proxysite="${file##*/}"
+    echo "proxysite = " > "${proxysite}"
+done
+cp /etc/nginx/sites-enabled/$proxysite ~/$proxysite.bak
+echo 
+echo -e "${YELLOW}Existing Nginx proxy site config backed up to ~/$proxysite.bak"
+echo
+
 echo
 echo
 # Print custom output for the various Nginx configs
@@ -149,19 +161,6 @@ echo
 #}
 #EOF
 #\n${clear}"
-
-# Backup existing Nginx config before we break things
-for file in "/etc/nginx/sites-enabled"/*
-do
-    echo "${file##*/}"
-    proxysite="${file##*/}"
-    echo "proxysite = " > "${proxysite}"
-done
-cp /etc/nginx/sites-enabled/$proxysite ~/$proxysite.bak
-echo 
-echo -e "${YELLOW}Existing Nginx proxy site config backed up to ~/$proxysite.bak"
-echo
-
 
 printf "${green}+---------------------------------------------------------------------------------------------------------------------------
 + NGINX SELF SIGNED SSL CONFIG (WITH AUTO HTTP REDIRECT)
