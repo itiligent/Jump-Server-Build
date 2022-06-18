@@ -37,6 +37,7 @@ EOF
 ${clear}
 echo
 echo -e "\e[1;33mCertificate config parameters are shown above. Edit this script as needed before proceeding."
+echo
 
 ####################################################################################
 # Color variables
