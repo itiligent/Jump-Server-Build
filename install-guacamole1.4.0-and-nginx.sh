@@ -24,14 +24,14 @@ while true
 do
 	echo -e "${GREEN}"
 	echo  
-	read -p "Confirm this jumpbox Linux HOSTNAME: " name
+	read -p "Enter Linux operating system HOSTNAME: " name
 	echo
 	echo
 	break
 	echo
 done 
 
-##@@## Change server hostname to entered value 
+##@@## Change server hostname to entered value and fix hosts file
 sudo hostnamectl set-hostname $name
 sudo sed -i '/127.0.1.1/d' /etc/hosts
 echo -e "Changing system hostname and adjusting the /etc/hosts entry to:"
