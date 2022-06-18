@@ -830,3 +830,11 @@ printf "${PURPLE}+--------------------------------------------------------------
 + the run ${YELLOW}timedatectl set-timezone Country/City${PURPLE}
 + e.g. sudo timedatectl set-timezone Australia/Melbourne
 +---------------------------------------------------------------------------------------------------------------------------\n${NC}"
+printf "${CYAN}+---------------------------------------------------------------------------------------------------------------------------
++ Remaining manual configurarion tasks:
++
++ This script has copied a range of configuration scripts, java extensions and a configuration document to your home directory.
++
++ For instructions on completeing further custom configuration steps, please see ${YELLOW}Guac-Completion-Tasks.doc ${CYAN} 
++ This guide explains installation script's default configuration and the steps available to complete your final hardened config. 
++---------------------------------------------------------------------------------------------------------------------------\n${NC}"
