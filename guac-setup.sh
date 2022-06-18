@@ -46,6 +46,6 @@ chmod +x *.sh
 sudo ./install-guacamole1.4.0-and-nginx.sh
 
 # Apply the branded login page
-sudo cp extenstions/branding.jar /etc/guacamole/extensions &> /dev/null
+sudo cp extensions/branding.jar /etc/guacamole/extensions &> /dev/null
 sudo systemctl restart tomcat9 &> /dev/null
 
