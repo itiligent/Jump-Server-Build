@@ -63,7 +63,7 @@ SSLNAME=$1
 SSLDAYS=$2
 
 if [ -z $1 ]; then
-  printf "Enter SSL certificate name (MUST BE THE EXACT Nginx reverse proxy DNS name given in the Guacamole setup script):"
+  printf "Enter SSL certificate name (This MUST be the EXACT Nginx proxy DNS name used in the Guacamole setup script):"
   read SSLNAME
 fi
 echo
