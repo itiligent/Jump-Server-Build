@@ -34,7 +34,7 @@ done
 ##@@## Change server hostname to entered value 
 sudo hostnamectl set-hostname $name
 sudo sed -i '/127.0.1.1/d' /etc/hosts
-echo -e "Changing system namem and adjusting /etc/hosts entry to:"
+echo -e "Changing system hostname and adjusting the /etc/hosts entry to:"
 echo '127.0.1.1       '${name}'' | sudo tee -a /etc/hosts
 echo 
 sudo systemctl restart systemd-hostnamed
@@ -44,7 +44,7 @@ while true
 do
 	echo   
 	read -p "Enter new Nginx reverse proxy site name e.g. guacamole : " website
-	echo -e "Please Note: The same proxy site name just must be used for optional SSL install scripts"
+	echo -e "Please Note: The same proxy site name must be used when running provided SSL install scripts"
 	echo 	
     break
     echo -e "${NC}"
