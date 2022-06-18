@@ -29,8 +29,11 @@ extendedKeyUsage    = serverAuth, clientAuth, codeSigning, emailProtection
 subjectAltName      = @alt_names
  
 [alt_names]
-DNS.1               = test.lan
-IP.1                = 172.17.18.2
+DNS.1               = name.your-domain.com
+DNS.2   			= www.your-domain.com
+DNS.3   = 			= another-domain.com
+
+IP.1                = 10.10.10.1
 
 
 EOF
