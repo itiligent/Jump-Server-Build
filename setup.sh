@@ -50,4 +50,3 @@ sudo cp extensions/branding.jar /etc/guacamole/extensions &> /dev/null
 sudo systemctl restart tomcat9 &> /dev/null
 # dont keep a local copy if installer, its better for future updates if this script is staged from github
 rm install-guacamole1.4.0-and-nginx.sh &> /dev/null
-
