@@ -44,10 +44,10 @@ done
 
 
 ##@@## Change server hostname to entered value 
-
+h=$name
 sudo hostnamectl set-hostname $name
 sudo sed -i '/127.0.1.1/d' /etc/hosts
-echo '127.0.1.1       $name' | sudo tee -a /etc/hosts
+echo '127.0.1.1       ${h}' | sudo tee -a /etc/hosts
 sudo systemctl restart systemd-hostnamed
 
 
