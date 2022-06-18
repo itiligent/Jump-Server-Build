@@ -35,7 +35,6 @@ DNS.3				= another-domain.com
 
 IP.1                = 10.10.10.1
 
-
 EOF
 ${clear}
 echo
