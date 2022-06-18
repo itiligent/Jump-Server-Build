@@ -127,8 +127,6 @@ cp /etc/nginx/sites-enabled/$proxysite ~/$proxysite.bak
 echo 
 echo -e "${YELLOW}Existing Nginx proxy site config backed up to ~/$proxysite.bak"
 echo
-
-echo
 echo
 
 # Print custom output for the various Nginx configs
