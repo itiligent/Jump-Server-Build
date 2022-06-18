@@ -24,7 +24,7 @@ while true
 do
 	echo -e "${GREEN}"
 	echo  
-	read -p "Enter Linux operating system HOSTNAME e.g. server1 " name
+	read -p "Enter Linux operating system HOSTNAME e.g. server1: " name
 	echo
 	echo
 	break
