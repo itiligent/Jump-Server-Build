@@ -634,7 +634,7 @@ if [ "${installMySQL}" = true ]; then
                 echo -e "${YELLOW}Couldn't find timezone, using UTC${NC}"
                 timezone="UTC"
             fi
-            echo -e "${YELLOW}Setting timezone as ${timezone}${NC}"
+            echo -e "${YELLOW}Setting MySQL timezone as ${timezone}${NC}"
             # Fix for https://issues.apache.org/jira/browse/GUACAMOLE-760
             mysql_tzinfo_to_sql /usr/share/zoneinfo 2>/dev/null | mysql -u root -D mysql -h ${mysqlHost} -P ${mysqlPort}
             crudini --set ${mysqlconfig} mysqld default_time_zone "${timezone}"
