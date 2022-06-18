@@ -58,6 +58,18 @@ do
 	echo
 done
 
+# Backup existing Nginx config before we break things
+for file in "/etc/nginx/sites-enabled"/*
+do
+    echo "${file##*/}"
+    proxysite="${file##*/}"
+    echo "proxysite = " > "${proxysite}"
+done
+cp /etc/nginx/sites-enabled/$proxysite ~/$proxysite.bak
+echo 
+echo -e "${YELLOW}Existing Nginx proxy site config backed up to ~/$proxysite.bak"
+echo
+
 guacamoleurl=http://localhost:8080/guacamole/
 
 # Configure /etc/nginx/sites-available/(website name)

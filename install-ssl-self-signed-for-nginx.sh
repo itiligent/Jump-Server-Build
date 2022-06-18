@@ -49,7 +49,6 @@ red='\033[1;31m'
 green='\033[1;32m'
 yellow='\033[1;33m'
 blue='\033[1;34m'
-magenta='\033[1;35m'
 cyan='\033[1;36m'
 purple='\033[1;35m'  
 clear='\033[0m'
@@ -63,7 +62,7 @@ SSLNAME=$1
 SSLDAYS=$2
 
 if [ -z $1 ]; then
-  printf "Enter SSL certificate name (This MUST be the EXACT Nginx proxy DNS name used in the Guacamole setup script):"
+  printf "Enter SSL certificate name (Nginx proxy DNS name in /etc/nginx/sites-enabled):"
   read SSLNAME
 fi
 echo
@@ -152,7 +151,16 @@ echo
 #\n${clear}"
 
 # Backup existing Nginx config before we break things
-cp /etc/nginx/sites-enabled/$SSLNAME ~/$SSLNAME.bak 
+for file in "/etc/nginx/sites-enabled"/*
+do
+    echo "${file##*/}"
+    proxysite="${file##*/}"
+    echo "proxysite = " > "${proxysite}"
+done
+cp /etc/nginx/sites-enabled/$proxysite ~/$proxysite.bak
+echo 
+echo -e "${YELLOW}Existing Nginx proxy site config backed up to ~/$proxysite.bak"
+echo
 
 
 printf "${green}+---------------------------------------------------------------------------------------------------------------------------
