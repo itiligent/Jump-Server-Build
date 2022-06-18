@@ -24,7 +24,7 @@ while true
 do
 	echo -e "${GREEN}"
 	echo  
-	read -p "Enter Linux operating system HOSTNAME: " name
+	read -p "Enter Linux operating system HOSTNAME e.g. server1 " name
 	echo
 	echo
 	break
@@ -43,7 +43,7 @@ sudo systemctl restart systemd-hostnamed
 while true
 do
 	echo   
-	read -p "Enter new Nginx reverse proxy site name e.g. guacamole or site.lan : " website
+	read -p "Enter Nginx reverse proxy FQDN DNS name e.g. site.lan,  : " website
 	echo -e "Please Note: The same proxy site name must be used when running provided SSL install scripts"
 	echo 	
     break
