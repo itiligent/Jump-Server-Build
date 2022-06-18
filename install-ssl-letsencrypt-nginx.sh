@@ -55,19 +55,16 @@ done
 
 
 # Redundant now $proxysite is in use to identify the current location of the HTTP site. Keeping it just in case of multiple sites on Nginx
-#while true
-#do
-#	echo -e "${GREEN}**Proxy site names are found in /etc/nginx/sites-enabled/**"
-#    read -p "Enter name of existing Nginx proxy website to reconfigure e.g. guacamole: " oldsite
-#	echo
-#	read -p "Confirm name of existing Nginx proxy website: " oldsite2
-#    echo
-#    [ "$oldsite" = "$oldsite2" ] && break
-#    echo "Old site names dont match. Please try again."
-#    echo
-#	echo -e "Reconfiguring $oldsite proxy website for SSL${CYAN}" 
-#	echo
-#done
+while true
+do
+	echo -e "${GREEN}**Proxy site names are found in /etc/nginx/sites-enabled/**"
+    read -p "Enter name of existing Nginx proxy website to reconfigure e.g. ${CYAN}${proxysite}${GREEN}: " oldsite
+	echo
+	echo
+	break
+	echo -e "Reconfiguring $oldsite proxy website for SSL${CYAN}" 
+	echo
+done
 
 # Backup existing Nginx config before we break things
 cp /etc/nginx/sites-enabled/$proxysite ~/$proxysite.bak
@@ -98,16 +95,18 @@ server {
 }
 EOL
 
-# symlink from sites-available to sites-enabled
-unlink /etc/nginx/sites-enabled/$proxysite
-#make sure default is unlinked
+
+
+#make sure default and previous HTTP sites are unlinked
 unlink /etc/nginx/sites-enabled/default
+unlink /etc/nginx/sites-enabled/$proxysite
+# symlink from sites-available to sites-enabled
 ln -s /etc/nginx/sites-available/$website /etc/nginx/sites-enabled/
 
-#service apache2 stop
+# Bounce  Nginx
 systemctl restart nginx
 
 #add-apt-repository ppa:certbot/certbot -y
 #apt-get update
-certbot --nginx -n -d $website --email $certbotemail --agree-tos --redirect --hsts
+#certbot --nginx -n -d $website --email $certbotemail --agree-tos --redirect --hsts
 
