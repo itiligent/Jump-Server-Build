@@ -19,6 +19,16 @@ apt-get upgrade -y
 apt-get install nginx certbot python3-certbot-nginx -y
 clear
 
+# Get existing Nginx config name 
+for file in "/etc/nginx/sites-enabled"/*
+do
+    echo "${file##*/}" 
+    proxysite="${file##*/}" 
+    echo "proxysite = " > "${proxysite}" 
+done
+
+clear
+
 # Get domain name, email address and old site names for new Let's encrypt certificate
 while true
 do
@@ -44,27 +54,22 @@ do
 done
 
 
-while true
-do
-	echo -e "${GREEN}**Proxy site names are found in /etc/nginx/sites-enabled/**"
-    read -p "Enter name of existing Nginx proxy website to reconfigure e.g. guacamole: " oldsite
-	echo
-	read -p "Confirm name of existing Nginx proxy website: " oldsite2
-    echo
-    [ "$oldsite" = "$oldsite2" ] && break
-    echo "Old site names dont match. Please try again."
-    echo
-	echo -e "Reconfiguring $oldsite proxy website for SSL${CYAN}" 
-	echo
-done
+# Redundant now $proxysite is in use to identify the current location of the HTTP site. Keeping it just in case of multiple sites on Nginx
+#while true
+#do
+#	echo -e "${GREEN}**Proxy site names are found in /etc/nginx/sites-enabled/**"
+#    read -p "Enter name of existing Nginx proxy website to reconfigure e.g. guacamole: " oldsite
+#	echo
+#	read -p "Confirm name of existing Nginx proxy website: " oldsite2
+#    echo
+#    [ "$oldsite" = "$oldsite2" ] && break
+#    echo "Old site names dont match. Please try again."
+#    echo
+#	echo -e "Reconfiguring $oldsite proxy website for SSL${CYAN}" 
+#	echo
+#done
 
 # Backup existing Nginx config before we break things
-for file in "/etc/nginx/sites-enabled"/*
-do
-    echo "${file##*/}"
-    proxysite="${file##*/}"
-    echo "proxysite = " > "${proxysite}"
-done
 cp /etc/nginx/sites-enabled/$proxysite ~/$proxysite.bak
 echo 
 echo -e "${YELLOW}Existing Nginx proxy site config backed up to ~/$proxysite.bak"
@@ -94,13 +99,10 @@ server {
 EOL
 
 # symlink from sites-available to sites-enabled
-unlink /etc/nginx/sites-enabled/$oldsite
+unlink /etc/nginx/sites-enabled/$proxysite
 #make sure default is unlinked
 unlink /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/$website /etc/nginx/sites-enabled/
-
-
-
 
 #service apache2 stop
 systemctl restart nginx
