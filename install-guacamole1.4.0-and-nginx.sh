@@ -24,7 +24,7 @@ while true
 do
 	echo -e "${GREEN}"
 	echo  
-	read -p "Confirm your itended Linux server HOSTNAME: " name
+	read -p "Confirm this jumpbox Linux HOSTNAME: " name
 	echo
 	echo
 	break
@@ -46,7 +46,10 @@ done
 ##@@## Change server hostname to entered value 
 #host=$name
 #sudo hostname $host
-	sudo hostname $name
+#	sudo hostname $name
+cat >/etc/hostname <<EOL
+$name
+EOL
 
 
 
