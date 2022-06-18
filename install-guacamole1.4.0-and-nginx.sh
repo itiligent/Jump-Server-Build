@@ -44,9 +44,7 @@ done
 
 
 ##@@## Change server hostname to entered value 
-#host=$name
-#sudo hostname $host
-#	sudo hostname $name
+
 cat >/etc/hostname <<EOL
 $name
 EOL
@@ -285,6 +283,9 @@ if [[ "${NAME}" == "Ubuntu" ]] || [[ "${NAME}" == "Linux Mint" ]]; then
         LIBPNG="libpng-dev"
 ##@@## Enable ufw regradless of Ubuntu version - ufw must be active for rules to be applied by this script
 	echo "y" | sudo ufw enable 
+##@@## Turn off cloud init.
+sudo touch /etc/cloud/cloud-init.disabled
+
     fi
     if [ "${installMySQL}" = true ]; then
         MYSQL="mysql-server mysql-client mysql-common"
@@ -748,7 +749,16 @@ rm -rf mysql-connector-java-*
 unset MYSQL_PWD
 echo
 
-##@@## Clean up
+
+##@@## Make sure unattended upgrades are turned on.
+systemctl enable unattended-upgrades
+systemctl start unattended-upgrades
+
+###@@## Allow automatic updates to reboot the system 
+sudo sed -i '/Unattended-Upgrade::Automatic-Reboot "false";/a\Unattended-Upgrade::Automatic-Reboot "true";' /etc/apt/apt.conf.d/50unattended-upgrades
+sudo systemctl restart unattended-upgrades.service
+
+##@@## Apt clean up
 sudo apt autoremove -y && sudo apt autoclean -y
 
 ##@##Set Guacamole URL
