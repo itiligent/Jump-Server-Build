@@ -36,6 +36,7 @@ DNS.3               = another-domain.com
 IP.1                = 10.10.10.1
 
 EOF
+
 ${clear}
 echo
 echo -e "\e[1;33mSSL certificate config parameters are shown above."
