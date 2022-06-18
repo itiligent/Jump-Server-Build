@@ -1,6 +1,6 @@
 #!/bin/bash
 #########################################################################
-# Build a fully Guacamole jump server incorporating Nginx reverse proxy 
+# Build a Guacamole jump server incorporating Nginx reverse proxy 
 # For Ubuntu 20.04.4 / Debian / Raspian
 # David Harrop 
 # April 2022
