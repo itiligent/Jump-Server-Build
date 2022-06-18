@@ -30,7 +30,7 @@ done
 clear
 
 # Backup existing Nginx config before we break things
-sudo -H cp /etc/nginx/sites-enabled/$proxysite /home/$HOME/$proxysite.bak
+sudo -E cp /etc/nginx/sites-enabled/$proxysite /home/$HOME/$proxysite.bak
 echo 
 echo -e "${YELLOW}Existing Nginx proxy site config backed up to ~/$proxysite.bak"
 echo
