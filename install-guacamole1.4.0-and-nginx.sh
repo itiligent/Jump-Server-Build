@@ -840,7 +840,7 @@ printf "${PURPLE}+--------------------------------------------------------------
 + e.g. sudo timedatectl set-timezone Australia/Melbourne
 +---------------------------------------------------------------------------------------------------------------------------\n${NC}"
 printf "${CYAN}+---------------------------------------------------------------------------------------------------------------------------
-+ For instructions on completing your jump server build, please see ${YELLOW}Guac-Completion-Tasks.doc ${CYAN} in your Linux home directory.
++ For instructions on completing your jump server build, please see ${YELLOW}Guac-Completion-Tasks.doc ${CYAN}in your Linux home directory.
 +
 + This document explains the current configuration and the final steps towards completing your high security appliance.
 + 
