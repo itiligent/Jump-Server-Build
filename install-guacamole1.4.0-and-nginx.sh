@@ -831,10 +831,10 @@ printf "${PURPLE}+--------------------------------------------------------------
 + e.g. sudo timedatectl set-timezone Australia/Melbourne
 +---------------------------------------------------------------------------------------------------------------------------\n${NC}"
 printf "${CYAN}+---------------------------------------------------------------------------------------------------------------------------
-+ Remaining manual configurarion tasks:
++ For instructions on completing your jump server build, please see ${YELLOW}Guac-Completion-Tasks.doc ${CYAN} in your Linux home directory.
 +
-+ This script has copied a range of configuration scripts, java extensions and a configuration document to your home directory.
-+
-+ For instructions on completeing further custom configuration steps, please see ${YELLOW}Guac-Completion-Tasks.doc ${CYAN} 
-+ This guide explains installation script's default configuration and the steps available to complete your final hardened config. 
++ This word document explains the current configuration status and the final steps required to complete your high security appliance.
++ 
++ To aid in these final customisation steps, custom configuration scripts and app extensions have also been added to your home directory.
+
 +---------------------------------------------------------------------------------------------------------------------------\n${NC}"
