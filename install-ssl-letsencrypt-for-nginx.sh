@@ -69,6 +69,7 @@ cp /etc/nginx/sites-enabled/$proxysite ~/$proxysite.bak
 echo 
 echo -e "${YELLOW}Existing Nginx proxy site config backed up to ~/$proxysite.bak"
 echo
+echo
 
 guacamoleurl=http://localhost:8080/guacamole/
 
