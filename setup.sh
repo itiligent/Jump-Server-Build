@@ -20,8 +20,8 @@ clear
 		wget -O disable-ssh-password-auth.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/disable-ssh-password-auth.sh &> /dev/null
 
 	# SSL config scripts
-		wget -O install-ssl-letsencrypt-for-nginx.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/install-ssl-letsencrypt-for-nginx.sh &> /dev/null
-		wget -O install-ssl-self-signed-for-nginx.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/install-ssl-self-signed-for-nginx.sh &> /dev/null
+		wget -O install-ssl-letsencrypt-for-nginx.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/install-ssl-letsencrypt-nginx.sh &> /dev/null
+		wget -O install-ssl-self-signed-for-nginx.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/install-ssl-self-signed-nginx.sh &> /dev/null
 
 	# Auth extensions
 		mkdir extensions
