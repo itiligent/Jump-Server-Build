@@ -833,8 +833,8 @@ printf "${PURPLE}+--------------------------------------------------------------
 printf "${CYAN}+---------------------------------------------------------------------------------------------------------------------------
 + For instructions on completing your jump server build, please see ${YELLOW}Guac-Completion-Tasks.doc ${CYAN} in your Linux home directory.
 +
-+ This word document explains the current configuration status and the final steps required to complete your high security appliance.
++ This document explains the current configuration and the final steps towards completing your high security appliance.
 + 
-+ To aid in these final customisation steps, custom configuration scripts and app extensions have also been added to your home directory.
++ To aid with final steps, various configuration scripts and app extensions have also been added to your home directory.
 
 +---------------------------------------------------------------------------------------------------------------------------\n${NC}"
