@@ -29,12 +29,12 @@ done
 
 clear
 
-# Backup existing Nginx config before we break things
-sudo -E cp /etc/nginx/sites-enabled/$proxysite /home/$HOME/$proxysite.bak
+# Backup the current Nginx config
+cp /etc/nginx/sites-enabled/${proxysite} ~/${proxysite}.bak
 echo 
-echo -e "${YELLOW}Existing Nginx proxy site config backed up to ~/$proxysite.bak"
-echo
-echo
+echo -e "${cyan}Existing Nginx proxy site config backed up to ~/$proxysite.bak"
+echo 
+echo 
 
 # Get domain name, email address and old site names for new Let's encrypt certificate
 while true
@@ -61,7 +61,7 @@ do
 done
 
 
-# Redundant now $proxysite is in use to identify the current location of the HTTP site. Keeping it just in case of multiple sites on Nginx
+# Confirm the correct siet to convert to SSL 
 while true
 do
 	echo -e "${GREEN}**Proxy site names are found in /etc/nginx/sites-enabled/**"
