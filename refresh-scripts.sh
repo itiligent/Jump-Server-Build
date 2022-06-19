@@ -1,6 +1,6 @@
 #!/bin/bash
 #########################################################################
-# Guac script updated for test & dev. Refresh the scripts scripts   
+# Guac script updated for test & dev. Refresh the local scripts   
 # For Ubuntu 20.04.4 / Debian / Raspian
 # David Harrop 
 # June 2022
