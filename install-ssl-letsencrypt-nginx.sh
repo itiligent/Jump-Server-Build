@@ -94,7 +94,6 @@ ln -s /etc/nginx/sites-available/$website /etc/nginx/sites-enabled/
 # Bounce  Nginx
 systemctl restart nginx
 
-#add-apt-repository ppa:certbot/certbot -y
-#apt-get update
-#certbot --nginx -n -d $website --email $certbotemail --agree-tos --redirect --hsts
+# Run certbot
+certbot --nginx -n -d $website --email $certbotemail --agree-tos --redirect --hsts
 
