@@ -121,7 +121,7 @@ sudo cp $SSLNAME.crt $DIR_SSL_CERT/$SSLNAME.crt
 #create a PFX formatted key for easier import to Windows hosts
 sudo openssl pkcs12 -export -out $SSLNAME.pfx -inkey $SSLNAME.key -in $SSLNAME.crt -password pass:1234
 sudo chmod 0774 $SSLNAME.pfx
-sudo cp $SSLNAME.pfx ~/$SSLNAME.pfx
+sudo mv $SSLNAME.pfx ~/$SSLNAME.pfx
 
 #Assists with displaying "$" and quotes in Bash output correctly
 showastext1='$mypwd'
