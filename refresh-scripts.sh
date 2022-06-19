@@ -6,8 +6,6 @@
 # June 2022
 ######################################################################### 
 
-clear
-
 # Download setup components
 
 	# Manual config scripts
