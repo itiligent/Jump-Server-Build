@@ -35,7 +35,6 @@ echo $proxysite > /dev/shm/getdomain.txt
 sed -i 's/'$HOSTNAME.'//' /dev/shm/getdomain.txt
 cn=$(cat /dev/shm/getdomain.txt)
 
-cp /etc/nginx/sites-enabled/${proxysite} ~/${proxysite}.bak
 
 echo
 cat <<EOF | sudo tee -a extfile.cnf
@@ -136,7 +135,7 @@ showastext7='$http_connection'
 showastext8='\'
 
 # Backup the current Nginx config
-
+cp /etc/nginx/sites-enabled/${proxysite} ~/${proxysite}.bak
 echo 
 echo -e "${cyan}Existing Nginx proxy site config backed up to ~/$proxysite.bak"
 echo 
