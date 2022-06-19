@@ -248,6 +248,7 @@ echo
 #Cleanup
 rm extfile.cnf
 rm /dev/shm/getdomain.txt
+rm $proxysite
 
 #Nginx somtimes needs a double bounce to avoid a restart
 sudo systemctl restart tomcat9
