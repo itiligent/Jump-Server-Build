@@ -40,4 +40,6 @@
 # Make all scripts everything executable
 chmod +x *.sh
 
+rm refresh-scripts.sh
+
 
