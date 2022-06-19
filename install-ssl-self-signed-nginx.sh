@@ -92,16 +92,6 @@ if [[ $SSLDAYS == "" ]]; then
 fi
 echo
 
-# Depreciated
-#while true
-#do
-#	echo -e "${GREEN}**Proxy site names are found in /etc/nginx/sites-enabled/**"
-#    read -p "Enter the name of your existing Nginx proxy site: " website
-#    echo && break
-#    echo
-#done
-
-
 echo "Creating a new Certificate ..."
 openssl req -x509 -nodes -newkey rsa:2048 -keyout $SSLNAME.key -out $SSLNAME.crt -days $SSLDAYS -config extfile.cnf 
 

@@ -61,20 +61,6 @@ do
 done
 
 
-# Confirm the correct siet to convert to SSL 
-while true
-do
-	echo -e "${GREEN}**Proxy site names are found in /etc/nginx/sites-enabled/**"
-    read -p "Enter name of EXISTING Nginx proxy site to reconfigure e.g. ${proxysite}: " oldsite
-	echo
-	echo
-	break
-	echo -e "Reconfiguring $oldsite proxy website for SSL${CYAN}" 
-	echo
-done
-
-
-
 guacamoleurl=http://localhost:8080/guacamole/
 
 # Configure /etc/nginx/sites-available/(website name)
