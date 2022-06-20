@@ -78,7 +78,7 @@ SSLNAME=$1
 SSLDAYS=$2
 
 if [ -z $1 ]; then
-  printf "Enter SSL cert DNS name (Unless you're an SSL expert, enter ${cyan}$proxysite${yellow} here): "
+  printf "Enter SSL certificate DNS name (Unless you're an SSL expert, enter ${cyan}$proxysite${yellow} here): "
   read SSLNAME
 fi
 echo
