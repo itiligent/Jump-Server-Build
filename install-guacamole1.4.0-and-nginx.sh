@@ -43,7 +43,7 @@ sudo systemctl restart systemd-hostnamed
 while true
 do
 	echo   
-	read -p "Enter intended Nginx proxy FULL DNS NAME e.g. name.yourdomain.lan  : " website
+	read -p "Enter Nginx proxy FULL DNS NAME e.g. name.yourdomain.lan  : " website
 	echo 	
     break
     echo -e "${NC}"
@@ -143,7 +143,7 @@ done
 
 if [[ -z "${installTOTP}" ]] && [[ "${installDuo}" != true ]]; then
     # Prompt the user if they would like to install TOTP MFA, default of no
-    echo -e -n "${CYAN}MFA: Would you like to install TOTP (choose 'N' if you want Duo)? (y/N): ${NC}"
+    echo -e -n "${CYAN}MFA: Install TOTP (choose 'N' if you want Duo)? (y/N): ${NC}"
     read PROMPT
 	echo
     if [[ ${PROMPT} =~ ^[Yy]$ ]]; then
@@ -156,7 +156,7 @@ fi
 
 if [[ -z "${installDuo}" ]] && [[ "${installTOTP}" != true ]]; then
     # Prompt the user if they would like to install Duo MFA, default of no
-    echo -e -n "${CYAN}MFA: Would you like to install Duo (configuration values must be set after install in /etc/guacamole/guacamole.properties)? (y/N): ${NC}"
+    echo -e -n "${CYAN}MFA: Install Duo (configuration values must be set after install in /etc/guacamole/guacamole.properties)? (y/N): ${NC}"
     read PROMPT
     if [[ ${PROMPT} =~ ^[Yy]$ ]]; then
         installDuo=true
