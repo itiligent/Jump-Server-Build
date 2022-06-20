@@ -165,8 +165,9 @@ echo
 printf "${green}+---------------------------------------------------------------------------------------------------------------------------
 + NGINX SELF SIGNED SSL CONFIG (WITH AUTO HTTP REDIRECT)
 +
-+ Copy the below content and paste into a linux shell
-+ then restart NGINX with ${cyan}sudo systemctl restart nginx${green}
++ 1. Copy the below content between cat and EOF inclusive. 
++ 2. Right click to paste this contne into a linux shell, enter sudo pw when prompted
++ 3. Restart NGINX with ${cyan}sudo systemctl restart nginx${green}
 +---------------------------------------------------------------------------------------------------------------------------\n
 cat <<EOF | sudo tee /etc/nginx/sites-enabled/$proxysite
 server {
@@ -215,8 +216,9 @@ ${clear}"
 printf "${red}+---------------------------------------------------------------------------------------------------------------------------
 + WINDOWS CLIENT SELF SIGNED SSL CONFIG 
 +
-+ Look in your Linux home directory for the Windows friendly version of the new certificate ${cyan}$SSLNAME.pfx${red}
-+ Import the PFX file into Windows with the following Powershell commands (as administrator)
++ 1. Look in your Linux home directory for the Windows friendly version of the new certificate ${cyan}$SSLNAME.pfx${red}
++ 2. Copy this file to a location accessible by windows
++ 3. Import the PFX file into Windows with the following Powershell commands (as administrator)
 +---------------------------------------------------------------------------------------------------------------------------\n${clear}"
 echo
 echo -e "\e[1;31m${showastext1} = ConvertTo-SecureString -String "1234" -Force -AsPlainText \e[0m"
@@ -227,8 +229,9 @@ echo
 printf "${purple}+---------------------------------------------------------------------------------------------------------------------------
 + LINUX CLIENT SELF SIGNED SSL CONFIG
 +
-+ Look to your Linux home directory for a copy of the native OpenSSL certificate ${cyan}$SSLNAME.crt${purple}
-+ Import the CRT file into the Linux certificate store with the below command
++ 1. Look to your Linux home directory for a copy of the native OpenSSL certificate ${cyan}$SSLNAME.crt${purple}
++ 2. Copy this file to a location accessible by Linux
++ 3. Import the CRT file into the Linux certificate store with the below command
 +---------------------------------------------------------------------------------------------------------------------------\n${clear}"
 echo
 echo -e "\e[1;35mcertutil -d sql:$HOME/.pki/nssdb -A -t "CT,C,c" -n $SSLNAME -i $SSLNAME.crt"${clear}
