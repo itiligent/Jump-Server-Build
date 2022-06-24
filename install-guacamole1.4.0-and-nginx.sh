@@ -754,7 +754,7 @@ systemctl start unattended-upgrades
 
 ###@@## Allow automatic updates to reboot the system 
 sudo sed -i '/Unattended-Upgrade::Automatic-Reboot "false";/a\Unattended-Upgrade::Automatic-Reboot "true";' /etc/apt/apt.conf.d/50unattended-upgrades
-sudo systemctl restart unattended-upgrades.service
+sudo systemctl restart unattended-upgrades
 
 ##@@## Apt clean up
 sudo apt autoremove -y && sudo apt autoclean -y

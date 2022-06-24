@@ -4,6 +4,15 @@
 # For Ubuntu 20.04.4 / Debian / Raspian
 # David Harrop 
 # June 2022
+#
+# Usage:
+# sudo ./install-openvas21-ubuntu20.sh -a -v 21 -u
+#
+#	options:
+#    -v | --version -- supported versions are 20|21
+#    -a | --api  -- Install and configure gsa api
+#    -u | --ufw  -- enable ufw and open ports 22,443
+#    -h | --help -- displays this
 ######################################################################### 
 
 # Download setup components

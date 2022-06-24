@@ -9,13 +9,14 @@
 # (SSH KEYS Cant be copied to ~/ with sudo invoked at runtime) 
 ###################################################################################
 clear
-#make sure putty-tools is available
+
 
 mkdir ~/.ssh
 touch ~/.ssh/authorized_keys
 chmod 700 ~/.ssh
 chmod 644 ~/.ssh/authorized_keys
 
+#make sure putty-tools is available
 #SUDO IS ONLY NEEDED HERE
 sudo apt update 
 sudo apt install putty-tools
