@@ -843,5 +843,5 @@ printf "${CYAN}+----------------------------------------------------------------
 +
 + This document explains the current configuration and the final steps towards completing your high security appliance.
 + 
-+ To aid with final steps, various configuration scripts and app extensions have also been added to your home directory.
++ To aid with final steps, various optional configuration scripts and app extensions have also been added to your home directory.
 +---------------------------------------------------------------------------------------------------------------------------\n${NC}"
