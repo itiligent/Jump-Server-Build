@@ -19,7 +19,7 @@ chmod 644 ~/.ssh/authorized_keys
 #make sure putty-tools is available
 #SUDO IS ONLY NEEDED HERE
 sudo apt update 
-sudo apt install putty-tools
+sudo apt install putty-tools -y
 
 while true
 do
