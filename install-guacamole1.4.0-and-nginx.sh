@@ -263,7 +263,7 @@ if [ "${installMySQL}" = true ]; then
 fi
 
 ##@@## Update OS and install Nginx while we are at it  
-	sudo apt update && sudo apt upgrade -y && apt install nginx -y && sudo apt install pwgen -y
+	sudo apt-get update && sudo apt-get upgrade -y && apt-get install nginx -y && sudo apt-get install pwgen -y
 
 # Different version of Ubuntu/Linux Mint and Debian have different package names...
 source /etc/os-release
@@ -298,8 +298,8 @@ elif [[ "${NAME}" == *"Debian"* ]] || [[ "${NAME}" == *"Raspbian GNU/Linux"* ]] 
     if [[ "${PRETTY_NAME}" == *"bullseye"* ]] || [[ "${PRETTY_NAME}" == *"stretch"* ]] || [[ "${PRETTY_NAME}" == *"buster"* ]] || [[ "${PRETTY_NAME}" == *"Kali GNU/Linux Rolling"* ]] || [[ "${NAME}" == "LMDE" ]]; then
         LIBPNG="libpng-dev"
 ##@@## Install ufw and unattended-upgrades as its not installed by default on Raspian 		
-		apt install ufw -y
-		apt install unattended-upgrades -y
+		apt-get install ufw -y
+		apt-get install unattended-upgrades -y
 		echo "y" | sudo ufw enable
     else
         LIBPNG="libpng12-dev"
@@ -757,7 +757,7 @@ sudo sed -i '/Unattended-Upgrade::Automatic-Reboot "false";/a\Unattended-Upgrade
 sudo systemctl restart unattended-upgrades
 
 ##@@## Apt clean up
-sudo apt autoremove -y && sudo apt autoclean -y
+sudo apt-get autoremove -y && sudo apt-get autoclean -y
 
 ##@##Set Guacamole URL
 guacamoleurl=http://localhost:8080/guacamole/
