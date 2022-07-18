@@ -18,7 +18,7 @@ if [ "$EUID" -ne 0 ]
     else
         echo "You must not START this script as root or sudo."
 		echo "Start the script as a regular user first."
-		echo "The script to prompt for sudo pw." 
+		echo "The script will then prompt for sudo pw." 
   exit
 fi
 
