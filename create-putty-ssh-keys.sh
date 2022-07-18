@@ -20,6 +20,7 @@ clear='\033[0m'
 if [ "$EUID" -ne 0 ]
   then echo -e "${green}Script started as non sudo user, all good."
 	   echo -e "${green}You will be prompted to enter sudo credentials shortly..${clear}"
+	   echo
     else
         echo -e "${yellow}DO NOT START THIS SCRIPT AS SUDO OR ROOT."
 		echo -e "${yellow}Instead, start the script as a regular user,"
