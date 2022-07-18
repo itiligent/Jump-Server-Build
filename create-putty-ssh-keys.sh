@@ -18,11 +18,12 @@ clear='\033[0m'
 # correct user keys in their correct loctions
 if [ "$EUID" -ne 0 ]
   then echo -e "${green}Script started as non sudo user, all good."
-	   echo -e "${green}You will be prompted to enter sudo credentials next...${clear}"
+	   echo -e "${green}You will be prompted to enter sudo credentials shortly..${clear}"
     else
         echo -e "${yellow}DO NOT START THIS SCRIPT AS SUDO OR ROOT."
 		echo -e "${yellow}Instead, start the script as a regular user,"
 		echo -e "${yellow}the script will then prompt for a sudo pw.${clear}" 
+		echo
   exit
 fi
 
@@ -39,6 +40,8 @@ sudo apt-get install putty-tools -y
 sudo sed -i  '$ a PubkeyAcceptedAlgorithms=+ssh-rsa' /etc/ssh/sshd_config
 sudo systemctl restart sshd
 
+
+
 echo -e "${green}"
 while true
 do
@@ -49,6 +52,8 @@ echo
     echo
 	break
 done
+
+clear
 
 #declare some extra variables
 h=$name
@@ -66,7 +71,7 @@ u="$USER"
 #echo 
 echo -e "\e[1;33mCreating SSH keys for $u@$h"
 echo
-echo -e "\e[1;31mWhen promted, DO NOT add a password. Hit Enter twice to finish"${clear}
+echo -e "\e[1;31mWhen promted, DO NOT ADD A PASSWORD. Hit Enter twice to finish"${clear}
 
 puttygen --ppk-param version=2 -t rsa -b 2048 -C "$u@$h" -o ~/$h-sshkey-priv-$u.ppk
 
