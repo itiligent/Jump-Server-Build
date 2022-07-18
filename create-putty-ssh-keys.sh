@@ -74,10 +74,15 @@ echo -e "\e[1;33mCreating SSH keys for $u@$h"
 echo
 echo -e "\e[1;31mWhen promted, DO NOT ADD A PASSWORD. Hit Enter twice to finish"${clear}
 
+
+##@@## Adderes the (PuTTY key format too new) puttygen big on Ubuntu 22.04. 20.04 seems ok. 
+if [[ $VERSION_CODENAME = "jammy" ]] || [[ $VERSION_CODENAME == "Something Else" ]]; then
+puttygen --ppk-param version=2 -t rsa -b 2048 -C "$u@$h" -o ~/$h-sshkey-priv-$u.ppk
+else
 puttygen -t rsa -b 2048 -C "$u@$h" -o ~/$h-sshkey-priv-$u.ppk
+fi
 
 puttygen -L ~/$h-sshkey-priv-$u.ppk -o ~/$h-sshkey-pub-$u.txt
-
 cat ~/$h-sshkey-pub-$u.txt >> ~/.ssh/authorized_keys 
 
 # Print custom output for the the private key
