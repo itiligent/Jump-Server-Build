@@ -9,18 +9,20 @@
 # (SSH KEYS Cant be copied to ~/ with sudo invoked at runtime) 
 ###################################################################################
 clear
-YELLOW='\033[1;33m'
-GREEN='\033[1;32m'
+red='\033[1;31m'
+green='\033[1;32m'
+yellow='\033[1;33m'
+clear='\033[0m'
 
 # This script must not be run as root. Must be in the user context to create the 
 # correct user keys in their correct loctions
 if [ "$EUID" -ne 0 ]
-  then echo -e "${GREEN}Script started as non sudo user, all good."
-	   echo -e "${GREEN}You will be prompted to enter sudo credentials next..."
+  then echo -e "${green}Script started as non sudo user, all good."
+	   echo -e "${green}You will be prompted to enter sudo credentials next..."
     else
-        echo -e "${YELLOW}DO NOT START THIS SCRIPT AS SUDO OR ROOT."
-		echo -e "${YELLOW}Instead, start the script as a regular user,"
-		echo -e "${YELLOW}the script will then prompt for a sudo pw." 
+        echo -e "${yellow}DO NOT START THIS SCRIPT AS SUDO OR ROOT."
+		echo -e "${yellow}Instead, start the script as a regular user,"
+		echo -e "${yellow}the script will then prompt for a sudo pw.${green}" 
   exit
 fi
 
@@ -48,12 +50,8 @@ echo
 	break
 done
 
-#declare some starting variables
+#declare some extra variables
 h=$name
-red='\033[1;31m'
-green='\033[1;32m'
-yellow='\033[1;33m'
-clear='\033[0m'
 u="$USER"
 
 
