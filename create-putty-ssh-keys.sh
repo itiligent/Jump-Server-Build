@@ -26,8 +26,8 @@ chmod 644 ~/.ssh/authorized_keys
 
 #make sure putty-tools is available
 #SUDO IS ONLY NEEDED HERE
-sudo apt update 
-sudo apt install putty-tools -y
+sudo apt-get update 
+sudo apt-get install putty-tools -y
 
 while true
 do
@@ -46,9 +46,6 @@ green='\033[1;32m'
 yellow='\033[1;33m'
 clear='\033[0m'
 u="$USER"
-
-
-
 
 #Change to the correct hostname (A live system name is needed for tracking SSH keys)
 #sudo hostname $name
@@ -89,6 +86,3 @@ printf "${green}+---------------------------------------------------------------
 +---------------------------------------------------------------------------------------------------------------------------\n${clear}"
 cat ~/$h-sshkey-pub-$u.txt
 printf "${green}+---------------------------------------------------------------------------------------------------------------------------\n\n${clear}"
-
-
-
