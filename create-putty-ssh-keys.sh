@@ -10,6 +10,14 @@
 ###################################################################################
 clear
 
+# This script must not be run as root. Must be in the user context to create the 
+# correct user keys in their correct loctions
+if [ "$EUID" -ne 0 ]
+  then echo "Not running as sudo is good, script will contine"
+    else
+        echo "You must run this script as root or sudo. Exiting"
+  exit
+fi
 
 mkdir ~/.ssh
 touch ~/.ssh/authorized_keys
