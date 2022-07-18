@@ -18,11 +18,11 @@ clear='\033[0m'
 # correct user keys in their correct loctions
 if [ "$EUID" -ne 0 ]
   then echo -e "${green}Script started as non sudo user, all good."
-	   echo -e "${green}You will be prompted to enter sudo credentials next..."
+	   echo -e "${green}You will be prompted to enter sudo credentials next...${clear}"
     else
         echo -e "${yellow}DO NOT START THIS SCRIPT AS SUDO OR ROOT."
 		echo -e "${yellow}Instead, start the script as a regular user,"
-		echo -e "${yellow}the script will then prompt for a sudo pw.${green}" 
+		echo -e "${yellow}the script will then prompt for a sudo pw.${clear}" 
   exit
 fi
 
@@ -39,7 +39,7 @@ sudo apt-get install putty-tools -y
 sudo sed -i  '$ a PubkeyAcceptedAlgorithms=+ssh-rsa' /etc/ssh/sshd_config
 sudo systemctl restart sshd
 
-
+echo -e "${green}"
 while true
 do
 echo
