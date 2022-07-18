@@ -8,6 +8,7 @@
 # LET THE SCRIPT ITSELF PROMPT FOR SUDO AFTER RUNNING IT
 # (SSH KEYS Cant be copied to ~/ with sudo invoked at runtime) 
 ###################################################################################
+
 clear
 red='\033[1;31m'
 green='\033[1;32m'
@@ -37,15 +38,13 @@ chmod 644 ~/.ssh/authorized_keys
 sudo apt-get update 
 sudo apt-get install putty-tools -y
 
-
-##@@## Ubuntu 22.04 now disbles rsa keys by default, whereas this fix will break SSH in Ubuntu 20.04 
+##@@## Ubuntu 22.04 has disbled rsa ssh keys by default.
 source /etc/os-release
 if [[ $VERSION_CODENAME = "jammy" ]] || [[ $VERSION_CODENAME == "Something Else" ]]; then
-# For Ubuntu 22.04 we need to downgrade to Postgresql 13
 sudo sed -i  '$ a PubkeyAcceptedAlgorithms=+ssh-rsa' /etc/ssh/sshd_config
 sudo systemctl restart sshd
+else
 fi
-
 
 echo -e "${green}"
 while true
@@ -64,9 +63,6 @@ clear
 h=$name
 u="$USER"
 
-
-
-
 #Change to the correct hostname (A live system name is needed for tracking SSH keys)
 #sudo hostname $name
 #echo
@@ -78,7 +74,7 @@ echo -e "\e[1;33mCreating SSH keys for $u@$h"
 echo
 echo -e "\e[1;31mWhen promted, DO NOT ADD A PASSWORD. Hit Enter twice to finish"${clear}
 
-puttygen --ppk-param version=2 -t rsa -b 2048 -C "$u@$h" -o ~/$h-sshkey-priv-$u.ppk
+puttygen -t rsa -b 2048 -C "$u@$h" -o ~/$h-sshkey-priv-$u.ppk
 
 puttygen -L ~/$h-sshkey-priv-$u.ppk -o ~/$h-sshkey-pub-$u.txt
 
@@ -106,6 +102,3 @@ printf "${green}+---------------------------------------------------------------
 +---------------------------------------------------------------------------------------------------------------------------\n${clear}"
 cat ~/$h-sshkey-pub-$u.txt
 printf "${green}+---------------------------------------------------------------------------------------------------------------------------\n\n${clear}"
-
-
-
