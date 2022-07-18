@@ -9,16 +9,18 @@
 # (SSH KEYS Cant be copied to ~/ with sudo invoked at runtime) 
 ###################################################################################
 clear
+YELLOW='\033[1;33m'
+GREEN='\033[1;32m'
 
 # This script must not be run as root. Must be in the user context to create the 
 # correct user keys in their correct loctions
 if [ "$EUID" -ne 0 ]
-  then echo "Script started as non sudo user, all good."
-	   echo "You will be prompted to enter sudo credentials next"
+  then echo -e "${GREEN}Script started as non sudo user, all good."
+	   echo -e "${GREEN}You will be prompted to enter sudo credentials next..."
     else
-        echo "You must not START this script as root or sudo."
-		echo "Start the script as a regular user first."
-		echo "The script will then prompt for sudo pw." 
+        echo -e "${YELLOW}DO NOT START THIS SCRIPT AS SUDO OR ROOT."
+		echo -e "${YELLOW}Instead, start the script as a regular user,"
+		echo -e "${YELLOW}the script will then prompt for a sudo pw." 
   exit
 fi
 
@@ -32,11 +34,15 @@ chmod 644 ~/.ssh/authorized_keys
 sudo apt-get update 
 sudo apt-get install putty-tools -y
 
+sudo sed -i  '$ a PubkeyAcceptedAlgorithms=+ssh-rsa' /etc/ssh/sshd_config
+sudo systemctl restart sshd
+
+
 while true
 do
 echo
 echo  
-   read -p "Enter the Linux hostname (to append to new SSH key names): " name
+   read -p "Enter the Linux hostname to append to new SSH key names: " name
     echo
     echo
 	break
