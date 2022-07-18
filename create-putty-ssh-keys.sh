@@ -37,9 +37,14 @@ chmod 644 ~/.ssh/authorized_keys
 sudo apt-get update 
 sudo apt-get install putty-tools -y
 
+
+##@@## Ubuntu 22.04 now disbles rsa keys by default, whereas this fix will break SSH in Ubuntu 20.04 
+source /etc/os-release
+if [[ $VERSION_CODENAME = "jammy" ]] || [[ $VERSION_CODENAME == "Something Else" ]]; then
+# For Ubuntu 22.04 we need to downgrade to Postgresql 13
 sudo sed -i  '$ a PubkeyAcceptedAlgorithms=+ssh-rsa' /etc/ssh/sshd_config
 sudo systemctl restart sshd
-
+fi
 
 
 echo -e "${green}"
