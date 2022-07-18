@@ -13,9 +13,12 @@ clear
 # This script must not be run as root. Must be in the user context to create the 
 # correct user keys in their correct loctions
 if [ "$EUID" -ne 0 ]
-  then echo "Not running as sudo is good, script will contine"
+  then echo "Script started as non sudo user, all good."
+	   echo "You will be prompted to enter sudo credentials next"
     else
-        echo "You must run this script as root or sudo. Exiting"
+        echo "You must not START this script as root or sudo."
+		echo "Start the script as a regular user first."
+		echo "The script to prompt for sudo pw." 
   exit
 fi
 
