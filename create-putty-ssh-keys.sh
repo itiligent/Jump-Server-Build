@@ -43,7 +43,6 @@ source /etc/os-release
 if [[ $VERSION_CODENAME = "jammy" ]] || [[ $VERSION_CODENAME == "Something Else" ]]; then
 sudo sed -i  '$ a PubkeyAcceptedAlgorithms=+ssh-rsa' /etc/ssh/sshd_config
 sudo systemctl restart sshd
-else
 fi
 
 echo -e "${green}"
