@@ -61,7 +61,7 @@ echo -e "\e[1;33mCreating SSH keys for $u@$h"
 echo
 echo -e "\e[1;31mWhen promted, DO NOT add a password. Hit Enter twice to finish"${clear}
 
-puttygen -t rsa -b 2048 -C "$u@$h" -o ~/$h-sshkey-priv-$u.ppk
+puttygen --ppk-param version=2 -t rsa -b 2048 -C "$u@$h" -o ~/$h-sshkey-priv-$u.ppk
 
 puttygen -L ~/$h-sshkey-priv-$u.ppk -o ~/$h-sshkey-pub-$u.txt
 
