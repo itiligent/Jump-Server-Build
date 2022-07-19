@@ -96,4 +96,3 @@ systemctl restart nginx
 
 # Run certbot
 certbot --nginx -n -d $website --email $certbotemail --agree-tos --redirect --hsts
-
