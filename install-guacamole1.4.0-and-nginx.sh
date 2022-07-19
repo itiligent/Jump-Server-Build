@@ -845,3 +845,4 @@ printf "${CYAN}+----------------------------------------------------------------
 + 
 + To aid with final steps, various optional configuration scripts and app extensions have also been added to your home directory.
 +---------------------------------------------------------------------------------------------------------------------------\n${NC}"
+
