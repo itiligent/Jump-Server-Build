@@ -1,18 +1,9 @@
 #!/bin/bash
 #########################################################################
-# Guac script updated for test & dev. Refresh the local scripts   
+# Download Jump Server installer materials   
 # For Ubuntu 20.04.4 / Debian / Raspian
 # David Harrop 
 # June 2022
-#
-# Usage:
-# sudo ./install-openvas21-ubuntu20.sh -a -v 21 -u
-#
-#	options:
-#    -v | --version -- supported versions are 20|21
-#    -a | --api  -- Install and configure gsa api
-#    -u | --ufw  -- enable ufw and open ports 22,443
-#    -h | --help -- displays this
 ######################################################################### 
 
 # Download setup components
@@ -46,7 +37,7 @@
 # Download main installer script
 		wget -O install-guacamole1.4.0-and-nginx.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/install-guacamole1.4.0-and-nginx.sh
 
-# Make all scripts everything executable
+# Make all scripts executable
 chmod +x *.sh
 
 rm refresh-scripts.sh
