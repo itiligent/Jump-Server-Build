@@ -16,8 +16,8 @@ clear
 		wget -O add-ldap-auth-guacamole.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/add-ldap-auth-guacamole.sh &> /dev/null
 
 	# SSH config scripts
-		wget -O create-putty-ssh-keys.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/create-putty-ssh-keys.sh &> /dev/null
-		wget -O disable-ssh-password-auth.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/disable-ssh-password-auth.sh &> /dev/null
+		wget -O create-putty-ssh-keys.sh https://raw.githubusercontent.com/itiligent/Linux-Stuff/main/create-putty-ssh-keys.sh &> /dev/null
+		wget -O disable-ssh-password-auth.sh https://raw.githubusercontent.com/itiligent/Linux-Stuff/main/disable-ssh-password-auth.sh &> /dev/null
 
 	# SSL config scripts
 		wget -O install-ssl-letsencrypt-nginx.sh https://raw.githubusercontent.com/itiligent/Guacamole-With-Nginx-Build/main/install-ssl-letsencrypt-nginx.sh &> /dev/null
